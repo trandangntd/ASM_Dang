@@ -206,9 +206,12 @@ class ProductController extends AbstractController
         return false;
     }
 
+
+
     /**
      * @Route("/product/productByCat/{id}", name="productByCat")
      */
+    
     public  function productByCatAction(ManagerRegistry $doctrine ,$id):Response
     {
         $category = $doctrine->getRepository(Category::class)->find($id);
